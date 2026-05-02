@@ -1,7 +1,7 @@
 library(evd)
 library(evir)
 
-source("../R/DPG_funciones.R")
+source("../Funciones/DPG_funciones.r")
 
 missi_daily <- read.csv("https://raw.githubusercontent.com/miguel-becares/TFG-distribuciones-de-colas-pesadas/main/Datos/Mississippi_daily.csv", stringsAsFactors = FALSE)
 
