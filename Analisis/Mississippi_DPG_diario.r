@@ -46,7 +46,7 @@ compare_perc_gpd(missi_day_dis,u_EMV,xi=xi_EMV,beta=beta_EMV,
                  np = 25,xlim=c(.99,1),ylim=c(15000,30000),
                  main =paste("Cuantil teórico vs empírico u = ",u_EMV))
 
-#comparación de cuantiles elevados
+#comparar percentiles
 q_gpd_cola(c(.9,.99,.999),missi_day_dis,u = u_EMV,xi=xi_EMV,beta=beta_EMV)
 quantile(missi_day_dis,c(.9,.99,.999))
 
