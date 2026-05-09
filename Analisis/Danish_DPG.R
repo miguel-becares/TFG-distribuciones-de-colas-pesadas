@@ -84,8 +84,7 @@ q_gpd_cola(c(.9,.99,.999),danish,u = u_HILL,xi=xi_HILL,beta=beta_HILL)
 quantile(danish,c(.9,.99,.999))
 
 
-#Obtener xi mediante la pendiente de la regresión lineal
-#en la función de exceso medio
+#Obtener xi mediante la pendiente de la regresión lineal en la función de exceso medio
 umbrales<-MEF$threshold[which((MEF$threshold>0.99) & (MEF$threshold<=100))]
 excesos_medios<-MEF$meanExcess[which((MEF$threshold>0.99) & (MEF$threshold<=100))]
 
