@@ -1,6 +1,4 @@
-library(VGAMextra)
 library(truncnorm)
-library(EnvStats)
 
 #Funciones
 
@@ -62,20 +60,6 @@ qq_truncnorm <-function(data,u,mu,sigma, r=ceiling(length(data)/2000),
        xlab="Cuantiles teóricos",ylab="Cuantiles empíricos",main=main)
   
   abline(0,1,col=col_teo,lwd=2)
-}
-
-compare_tln_pdf <- function(data, u, mu, sigma,breaks = "FD",
-                            xlim=c(min(data),max(data)),ylim =c(0,.15),
-                            main="Densidad empírica vs TLN"){
-  datatr <- data[data>=u]
-  n<- length(datatr)
-  xg <- seq(xlim[1], xlim[2], length.out =500)
-
-  hist(datatr, prob = TRUE, breaks = breaks,
-       main = main,xlab = "x", ylab= "Densidad",
-       xlim=xlim,ylim = ylim)
-  
-  lines(xg,dlnormTrunc(xg, meanlog=mu, sdlog=sigma ,min=u,max=Inf), lwd = 1.5,col="red")
 }
 
 q_tln_cola <- function(p,data,u,mu,sigma){
