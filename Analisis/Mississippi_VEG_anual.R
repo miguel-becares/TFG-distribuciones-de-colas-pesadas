@@ -3,10 +3,12 @@ library(evir)
 
 source("../Funciones/VEG_funciones.r")
 
+# Datos
 missi_anual <- read.csv("https://raw.githubusercontent.com/miguel-becares/TFG-distribuciones-de-colas-pesadas/main/Datos/Mississippi_max_anual.csv", stringsAsFactors = FALSE)
 
 mis_max_an <- missi_anual$flow_m3s
 
+# Histograma
 hist(mis_max_an,breaks =18,main = "Histograma de máximos anuales",
      xlab = "Caudal en metros cúbicos por segundo",
      ylab = "Fracuencia")
